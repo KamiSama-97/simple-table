@@ -1,0 +1,190 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Evitar scroll horizontal de la página */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* Scrollable container */
+.table-container {
+    border-top: 0px;
+    overflow: auto;
+    /* Enables both horizontal and vertical scrolling */
+    height: 90vh;
+    width: 100vw;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.table-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+/* Table layout */
+.table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* Ensures consistent column widths */
+    width: 100%;
+}
+
+/* Table cells and headers */
+.table th,
+.table td {
+    padding: 8px;
+    text-align: center;
+    border: none;
+    /* Ocultar separadores de celdas */
+}
+
+/* Frozen first column */
+/*.table td:nth-child(1),*/
+/*.table th:nth-child(1) {*/
+/*  background: red; /* Highlighted background for frozen column */
+/*  position: sticky;*/
+/*  left: 0; /* Ensures the column stays on the left */
+/*  z-index: 5; /* Keeps the column above other cells */
+/*  color: white;*/
+/*}*/
+
+
+/* Add higher z-index for header */
+.table th:nth-child(1) {
+    z-index: 6;
+}
+
+/* Sticky header */
+.table th {
+    background-color: #ac92b2;
+    color: #3b323d;
+    font-size: 14px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    /* Makes the header stick to the top */
+    z-index: 2;
+    /* Keeps the header above the table body */
+}
+
+/* Styling for table body */
+.table td {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Zebra striping for rows */
+.table tr:nth-child(odd) {
+    background-color: #f9fafb;
+}
+
+/* Hover effect for rows */
+.table tr:hover {
+    background-color: rgba(14, 116, 144, 0.1);
+}
+
+/* No data row styling */
+.no-data {
+    text-align: center;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-first {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #ac92b2;
+}
+
+.container-third {
+    height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    background-color: #ac92b2;
+    width: 100%;
+}
+
+/* Search inputs and button in container-first */
+.search-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+}
+
+.search-input {
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 2px solid #3b323d;
+    min-width: 0;
+    flex: 1 1 0;
+}
+
+.search-btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #3b323d;
+    color: #ffffff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    flex: 0 0 auto;
+    font-family: Arial, sans-serif;
+    border: 2px solid #3b323d;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.search-btn[disabled] {
+    background-color: #ac92b2;
+    color: #3b323d;
+    cursor: not-allowed;
+}
+
+/* Permitir que la segunda columna del layout expanda su contenido
+   y que la tabla dentro ocupe todo el ancho del contenedor */
+.container.container-second {
+    align-items: stretch;
+    width: 100%;
+}
+
+
+/* Asegurar que la tabla ocupe todo el ancho del wrapper */
+.table-wrapper table {
+    width: 100%;
+}
+
+.download {
+    margin-right: 8px;
+}
+
+.download:hover {
+    background-color: #ac92b2;
+    color: #3b323d;
+}

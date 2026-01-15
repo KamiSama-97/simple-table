@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabla simple - 5 columnas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-first">
+            <div class="search-row">
+                <input id="queueName" class="search-input" type="text" placeholder="Queue name">
+                <input id="queueId" class="search-input" type="text" placeholder="Queue ID">
+                <button id="searchBtn" class="search-btn" disabled>Buscar</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Mail</th>
+                        <th>Presencia</th>
+                        <th>Skills</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Additional rows can go here -->
+                </tbody>
+            </table>
+        </div>
+        <div class="container-third">
+            <button id="downloadButton" class="search-btn download">Download Data</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
